@@ -7,14 +7,12 @@ public class ConsoleCalculator {
         Scanner scanner=new Scanner(System.in);
         System.out.println("Enter str:");
         String str=scanner.nextLine();
-        int result=0;
 
         calculate(str);
-        System.out.println(result);
     }
 
-    public static int calculate(String str) {
-        int result=0;
+    public static void calculate(String str) {
+       int result=0;
         for (int i=0;i<str.length();i++) {
             if (str.charAt(i)=='+') {
                 result = Integer.parseInt(str.substring(0,i))+Integer.parseInt(str.substring(i+1,str.length()));
@@ -33,7 +31,7 @@ public class ConsoleCalculator {
                 else result =  Integer.parseInt(str.substring(0,i))/Integer.parseInt(str.substring(i+1,str.length()));
             }
         }
-        return result;
+        System.out.println(result);
     }
 }
 
