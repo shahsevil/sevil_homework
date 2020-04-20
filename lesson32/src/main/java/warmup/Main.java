@@ -11,6 +11,7 @@ public class Main {
             int delta = idx - row * C;
             int col = (row&1)==0 ? delta : C-1-delta;
             return a[row][col];
+
         })
                 .mapToObj(String::valueOf)
                 .collect(Collectors.joining(" "));
